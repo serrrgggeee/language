@@ -1,0 +1,54 @@
+<div class="manage_select_element">
+	
+	<span *ngIf="selected_val">{{selected_val}}</span>
+	<span *ngIf="!selected_val">выбирите язык</span>
+	<span  [ngClass]="{'narrow':true, 'menu_opened':opened}"><b (click)="setSearchFocus()"></b></span>
+
+</div>
+<span class="select_box"
+	[style.visibility]="opened? 'visible': 'hidden'"
+	>
+	<div class="input_box">
+		<input 
+		#searchField 
+		class="search_field" 
+		[(ngModel)]="search_field"
+		(ngModelChange)="this.userSearchUpdate.next($event)"
+		[autofocus]="true"
+		>
+
+		<span  [ngClass]="{'clear_search_field':true}"><b (click)="clearSerachField()"></b></span>
+	</div>
+	<div
+		*ngIf="automation_inside.length > 0"
+	>
+		<strong>Atomation</strong>
+		<ul class="ul_result">
+			<li 
+				*ngFor="let languege of automation_inside"
+				[ngClass]="{'li_result':true,'Mapped':languege.Mapped}"
+				(click)="checkLanguage(languege.name)" 
+				>
+				{{languege.name}}
+			</li>
+		</ul>
+		<hr class="language_splite">
+	</div>
+	<div>
+		<strong>Monitor</strong>
+		<ul class="ul_result">
+			<li 
+				*ngFor="let languege of getMonitor();
+				trackBy:trackByLanguegeID; 
+				let i=index"
+				[ngClass]="{'li_result':true,'Mapped':languege.Mapped}"
+				(click)="checkLanguage(languege.name)" 
+				>
+			{{languege.name}}
+			</li>
+		</ul>
+		<span [style.visibility]="monitor_more? '': 'hidden'" (click)="getMoreMonitor()">Ещё</span>
+	</div>
+</span>
+
+

@@ -1,0 +1,101 @@
+.narrow {
+    height: 100%;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 0;
+    width: 20px;
+    z-index: 10000;
+}
+
+.narrow b{
+    display: block;
+    cursor: pointer;
+    width: 100%;
+    height: 100%;
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" preserveAspectRatio="none" viewBox="0 0 24 24"><path d="M12 7.5q-.20527344.0017578-.35.15l-7.5 7.5q-.1482422.14472656-.15.35.0017578.20527344.15.35.14472656.1482422.35.15.20527344-.0017578.35-.15L12 8.7l7.15 7.15q.14472656.1482422.35.15.20527344-.0017578.35-.15.1482422-.14472656.15-.35-.0017578-.20527344-.15-.35l-7.5-7.5q-.14472656-.1482422-.35-.15z"/></svg>');
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: 24px 24px;
+    -webkit-transform: rotate(180deg);
+    transform: rotate(180deg);
+    -webkit-transition: -webkit-transform 0.25s ease;
+    transition: -webkit-transform 0.25s ease;
+    transition: transform 0.25s ease;
+    transition: transform 0.25s ease, -webkit-transform 0.25s ease;
+}
+
+.clear_search_field {
+    height: 100%;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 20px;
+    width: 40px;
+    z-index: 10000;
+
+}
+
+.clear_search_field b{
+    display: block;
+    cursor: pointer;
+    width: 100%;
+    height: 100%;
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18"><path d="M14.53 4.53l-1.06-1.06L9 7.94 4.53 3.47 3.47 4.53 7.94 9l-4.47 4.47 1.06 1.06L9 10.06l4.47 4.47 1.06-1.06L10.06 9z"/></svg>                             ');
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: 24px 24px;
+    -webkit-transition: -webkit-transform 0.25s ease;
+    transition: -webkit-transform 0.25s ease;
+    transition: transform 0.25s ease;
+    transition: transform 0.25s ease, -webkit-transform 0.25s ease;
+}
+
+.menu_opened b {
+    transform: rotate(0deg);
+}
+.manage_select_element {
+    background-color: white;
+    z-index: 1000;
+    position: relative;
+    border: 1px solid green;
+    height: 50px;
+}
+.input_box {
+    position: relative;
+    display: block;
+    height: 50px;
+}
+
+.select_box {
+    background-color: white;
+    z-index: 1000;
+    position: relative;
+    display: block;
+    padding: 10px;
+}
+
+.search_field{
+    width: -webkit-fill-available;
+    height: -webkit-fill-available;
+}
+
+.li_result {
+    list-style-type: none;
+    color: red;
+    cursor: pointer;
+}
+
+.ul_result {
+    margin: 0;
+    padding: 0;
+}
+
+.language_splite {
+  border-top: 1px solid red;
+}
+
+.Mapped {
+    font-weight: bolder;
+}
+
